@@ -6,8 +6,8 @@ using UnityEngine;
 public class Columnas : MonoBehaviour
 {
     public float velocidad = 1;
-    [Range(0,2)]
-    public float offset = 2f;
+    [Range(0,3)]
+    public float offset;
     // Start is called before the first frame update
     void Start()
     {

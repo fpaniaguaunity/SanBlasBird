@@ -6,17 +6,19 @@ public class Bird : MonoBehaviour
 {
     public float fuerza = 50;
     private Rigidbody rb;
-    // Start is called before the first frame update
+
+    private AudioSource audioS;//Sonido del salto
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioS = GetComponent<AudioSource>();//Sonido del salto
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1")){
             rb.AddForce(new Vector3(0,fuerza,0));
+            audioS.Play();//Sonido el salto
         }
     }
 }
